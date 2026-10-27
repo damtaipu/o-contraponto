@@ -2,7 +2,7 @@ const {spawnSync}=require('node:child_process'),fs=require('node:fs'),os=require
 const d=fs.mkdtempSync(path.join(os.tmpdir(),'contraponto-')),file=path.join(d,'articles.json');fs.writeFileSync(file,'[]\n');
 const body=['### Título','Matéria de teste','### Subtítulo','Resumo de teste','### Categoria','Economia','### Autor','Humberto Bascot','### Tipo','Análise','### URL da fonte oficial','https://www.gov.br/','### Nome da fonte','Portal oficial','### Texto da matéria','Texto fictício para teste automatizado. '.repeat(12)].join('\n\n');
 const run=(content,n)=>spawnSync(process.execPath,['tools/publicar-materia.js'],{encoding:'utf8',env:{...process.env,ARTICLE_BODY:content,ARTICLES_FILE:file,ISSUE_NUMBER:n}});
-assert.equal(run(body,'999').status,0,'primeira publicação');
+const first=run(body,'999');console.log('primeira execução',first.status,first.stdout,first.stderr);assert.equal(first.status,0,'primeira publicação');
 assert.equal(JSON.parse(fs.readFileSync(file)).length,1);
 assert.equal(run(body,'999').status,0,'idempotência');
 assert.equal(JSON.parse(fs.readFileSync(file)).length,1);
