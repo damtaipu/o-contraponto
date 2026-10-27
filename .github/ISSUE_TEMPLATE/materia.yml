@@ -1,0 +1,62 @@
+name: Nova matéria
+description: Prepare uma matéria para revisão. A publicação acontece somente quando um mantenedor adiciona o rótulo publicar.
+title: "[MATÉRIA] "
+body:
+  - type: markdown
+    attributes:
+      value: "Leia e confira todas as fontes antes de aprovar. Somente mantenedores devem adicionar o rótulo publicar."
+  - type: input
+    id: titulo
+    attributes:
+      label: Título
+      placeholder: Título informativo, sem sensacionalismo
+    validations:
+      required: true
+  - type: textarea
+    id: subtitulo
+    attributes:
+      label: Subtítulo
+    validations:
+      required: true
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoria
+      options: [Política, Economia, Justiça, Educação, Liberdades, Sociedade]
+    validations:
+      required: true
+  - type: dropdown
+    id: autor
+    attributes:
+      label: Autor
+      options: [Vasconcelos Dumont, Humberto Bascot, Augusto Valença]
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo
+      options: [Notícia, Análise, Opinião]
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: URL da fonte oficial
+      placeholder: https://...
+    validations:
+      required: true
+  - type: input
+    id: fonte
+    attributes:
+      label: Nome da fonte
+      placeholder: Diário Oficial / STF / Câmara
+    validations:
+      required: true
+  - type: textarea
+    id: texto
+    attributes:
+      label: Texto da matéria
+      description: Cole o texto final revisado. Use linhas em branco para separar parágrafos.
+    validations:
+      required: true
