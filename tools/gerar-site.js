@@ -20,8 +20,8 @@ function meta(a,url){
  return '<title>'+esc(title)+'</title><meta name="description" content="'+escapeAttr(desc)+'"><link rel="canonical" href="'+url+'"><meta property="og:type" content="article"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="O Contraponto"><meta property="og:title" content="'+escapeAttr(a.title)+'"><meta property="og:description" content="'+escapeAttr(desc)+'"><meta property="og:url" content="'+url+'"><meta property="og:image" content="'+escapeAttr(image)+'"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="'+escapeAttr(a.title)+'"><meta name="twitter:description" content="'+escapeAttr(desc)+'"><meta name="twitter:image" content="'+escapeAttr(image)+'">';
 }
 const stylesheet='<link rel="stylesheet" href="/style.css">';
-const articleBody=a.content.split(/\n\s*\n/).filter(Boolean).map(p=>'<p>'+esc(p)+'</p>').join('\n');
 for(const a of articles){
+ const articleBody=a.content.split(/\n\s*\n/).filter(Boolean).map(p=>'<p>'+esc(p)+'</p>').join('\n');
  const url=ORIGIN+permalink(a),dir=path.join('materias',slug(a.id||a.title));fs.mkdirSync(dir,{recursive:true});
  const ld={'@context':'https://schema.org','@type':a.type==='Notícia'?'NewsArticle':'Article',headline:a.title,description:a.subtitle,datePublished:a.publishedAt,dateModified:a.updatedAt||a.publishedAt,inLanguage:'pt-BR',image:[a.imageUrl],author:{'@type':'Person',name:a.author},publisher:{'@type':'Organization',name:'O Contraponto',url:ORIGIN},mainEntityOfPage:{'@type':'WebPage','@id':url}};
  const sources=[{label:a.sourceLabel||'Fonte oficial',url:a.sourceUrl},...(Array.isArray(a.sources)?a.sources:[])].filter(s=>safeUrl(s.url));
