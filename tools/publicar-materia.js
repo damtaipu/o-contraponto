@@ -1,0 +1,22 @@
+const fs=require('node:fs');
+const path=require('node:path');
+const body=process.env.ARTICLE_BODY ?? JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH,'utf8')).issue.body;
+const fields={};
+const matches=[...body.matchAll(/^### ([^\n]+)\r?\n([\s\S]*?)(?=^### |$(?![\s\S]))/gm)];
+for(const [,label,value] of matches)fields[label.trim()]=value.trim();
+const required=(key)=>{const v=(fields[key]||'').trim();if(!v||v==='_No response_')throw Error('Campo obrigatório ausente: '+key);return v};
+const title=required('Título'),subtitle=required('Subtítulo'),category=required('Categoria'),author=required('Autor'),type=required('Tipo'),sourceUrl=required('URL da fonte oficial'),sourceLabel=required('Nome da fonte'),content=required('Texto da matéria');
+if(!['Vasconcelos Dumont','Humberto Bascot','Augusto Valença'].includes(author))throw Error('Autor inválido');
+if(!['Notícia','Análise','Opinião'].includes(type))throw Error('Tipo inválido');
+if(!['Política','Economia','Justiça','Educação','Liberdades','Sociedade'].includes(category))throw Error('Categoria inválida');
+if(!/^https:\/\/[^\s]+$/i.test(sourceUrl))throw Error('URL HTTPS inválida');
+if(title.length>160||subtitle.length>350||content.length<250||content.length>25000)throw Error('Tamanho da matéria inválido');
+const file=path.join(process.cwd(),process.env.ARTICLES_FILE||'articles.json');
+const articles=JSON.parse(fs.readFileSync(file,'utf8'));
+if(!Array.isArray(articles))throw Error('Artigos inválidos');
+const issue=process.env.ISSUE_NUMBER||'teste';
+const id='pauta-'+issue;
+if(articles.some(x=>x.id===id)){console.log('Artigo já publicado',id);process.exit(0)}
+articles.unshift({id,title,subtitle,category,type,author,publishedAt:new Date().toISOString(),content,sourceUrl,sourceLabel,disclosure:'Pseudônimo editorial fictício. Texto preparado com apoio de IA e revisado por editor humano.'});
+fs.writeFileSync(file,JSON.stringify(articles,null,2)+'\n');
+console.log('Matéria adicionada',id);
