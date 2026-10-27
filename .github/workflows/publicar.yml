@@ -19,10 +19,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Validar testes do processador
+        run: node tests/publicar.test.js
       - name: Validar e adicionar matéria
         env:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
-        run: node scripts/publicar.js
+        run: node tools/publicar-materia.js
       - name: Registrar publicação
         run: |
           if ! git diff --quiet -- articles.json; then
