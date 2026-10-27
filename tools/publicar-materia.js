@@ -11,7 +11,8 @@ if(!['Notícia','Análise','Opinião'].includes(type))throw Error('Tipo inválid
 if(!['Política','Economia','Justiça','Educação','Liberdades','Sociedade'].includes(category))throw Error('Categoria inválida');
 if(!/^https:\/\/[^\s]+$/i.test(sourceUrl))throw Error('URL HTTPS inválida');
 if(title.length>160||subtitle.length>350||content.length<250||content.length>25000)throw Error('Tamanho da matéria inválido');
-const file=path.join(process.cwd(),process.env.ARTICLES_FILE||'articles.json');
+const target=process.env.ARTICLES_FILE||'articles.json';
+const file=path.isAbsolute(target)?target:path.join(process.cwd(),target);
 const articles=JSON.parse(fs.readFileSync(file,'utf8'));
 if(!Array.isArray(articles))throw Error('Artigos inválidos');
 const issue=process.env.ISSUE_NUMBER||'teste';
