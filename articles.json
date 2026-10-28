@@ -1,5 +1,33 @@
 [
   {
+    "id": "pl-3066-2026-simplificacao-regulatoria",
+    "title": "Governo já possui os dados, mas exige documentos: projeto quer acabar com a burocracia repetida",
+    "subtitle": "Proposta em análise na Câmara pretende reduzir exigências documentais repetidas e modernizar procedimentos. O desafio será transformar simplificação legislativa em liberdade efetiva para empreender.",
+    "author": "Humberto Bascot",
+    "type": "Análise",
+    "category": "Economia",
+    "publishedAt": "2026-10-28T13:54:00-03:00",
+    "documentId": "Projeto de Lei nº 3.066/2026",
+    "sourceUrl": "https://www.camara.leg.br/proposicoesWeb/prop_imp?idProposicao=2631841&ord=1&tp=completa",
+    "sourceLabel": "Câmara dos Deputados — PL 3066/2026",
+    "sources": [
+      {
+        "label": "Câmara dos Deputados — PL 3066/2026, apresentação 11/06/2026",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_imp?idProposicao=2631841&ord=1&tp=completa"
+      },
+      {
+        "label": "Lei nº 13.874/2019 — Liberdade Econômica",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13874.htm"
+      }
+    ],
+    "imageUrl": "https://raw.githubusercontent.com/damtaipu/o-contraponto/main/images/simplificacao-regulatoria-2026.svg",
+    "imageAlt": "Ilustração editorial original mostrando documentos administrativos dando lugar a um processo simplificado",
+    "imageCredit": "Ilustração editorial original — O Contraponto",
+    "imageCreditUrl": "https://github.com/damtaipu/o-contraponto/blob/main/images/simplificacao-regulatoria-2026.svg",
+    "imageLicenseUrl": "",
+    "content": "Quando diferentes repartições exigem repetidamente informações que o próprio Estado já possui, o empreendedor perde tempo e enfrenta procedimentos administrativos que poderiam ser resolvidos entre órgãos públicos.\n\nO Projeto de Lei nº 3.066/2026, apresentado em 11 de junho pelo deputado Josenildo (PDT-AP), pretende enfrentar esse problema. A proposta institui um marco nacional de modernização econômica e simplificação regulatória, com objetivos de fortalecer a liberdade econômica, reduzir a burocracia, ampliar a transformação digital e elevar a competitividade.\n\nO Estado não deveria exigir o que já sabe\n\nUma das direções discutidas é reduzir solicitações repetidas de documentos disponíveis em bases oficiais. A integração de informações pode aliviar tarefas administrativas, mas precisa observar a legislação de proteção de dados pessoais e os limites de acesso entre órgãos.\n\nSob a perspectiva da liberdade econômica, a administração pública existe para prestar serviços à sociedade, não para transferir ao cidadão dificuldades de comunicação entre departamentos. Simplificar procedimentos não significa autorizar circulação indiscriminada de dados.\n\nO problema das licenças\n\nOutra frente de debate é o licenciamento de atividades econômicas e a aprovação tácita de determinados pedidos quando a administração não responde no prazo aplicável.\n\nO mecanismo não é inteiramente novo. A Lei da Liberdade Econômica, de 2019, já prevê tratamento simplificado para atividades de baixo risco e aprovação tácita em hipóteses específicas. Assim, uma nova lei deve ser julgada também por sua capacidade de melhorar a execução de direitos já previstos.\n\nAbrir CNPJ não é o mesmo que estar autorizado a operar\n\nO tempo necessário para registrar uma empresa é apenas uma parte da experiência do empreendedor. Dependendo da atividade, inscrições, autorizações e licenças podem continuar sendo necessárias.\n\nA rapidez no registro, portanto, não comprova sozinha que o ambiente regulatório seja simples. Para avaliar a eficácia de uma reforma, será importante medir o tempo completo até o início regular das operações e identificar quais exigências foram efetivamente eliminadas.\n\nA burocracia também protege?\n\nHá justificativas legítimas para determinados controles. Atividades que envolvem riscos sanitários, ambientais ou à segurança das pessoas precisam de fiscalização proporcional.\n\nO problema surge quando procedimentos semelhantes são impostos a negócios com riscos muito diferentes. Uma pequena atividade comercial não deveria enfrentar automaticamente a mesma complexidade de uma instalação industrial potencialmente perigosa.\n\nPor outro lado, critérios nacionais de simplificação não devem ignorar condições locais relevantes nem enfraquecer salvaguardas comprovadamente necessárias.\n\nLiberdade econômica precisa produzir resultados\n\nO PL 3.066/2026 ainda está em tramitação na Câmara dos Deputados. Conforme a ficha legislativa consultada, aguardava designação de relator na Comissão de Administração e Serviço Público. Não é lei vigente, e suas medidas ainda podem mudar durante a discussão parlamentar.\n\nOs documentos consultados não permitem afirmar quanto dinheiro sua eventual aprovação economizaria para empresas ou governos. Também não demonstram quantos negócios seriam criados como consequência direta das propostas.\n\nO benefício esperado de reduzir exigências desnecessárias é plausível, mas precisa ser demonstrado após eventual implementação.\n\nO contraponto editorial é claro: o Estado não deveria criar novas camadas de procedimentos para solucionar dificuldades que ele próprio produziu. Uma modernização verdadeira precisa reduzir etapas, estabelecer responsabilidades e permitir que o cidadão acompanhe seus direitos.\n\nO sucesso de qualquer simplificação não deverá ser medido pela quantidade de plataformas digitais anunciadas, mas pelo tempo efetivamente devolvido a quem trabalha e empreende."
+  },
+  {
     "id": "pgfn-fgts-transacao-edital-12-2026",
     "title": "Governo permite renegociar até R$ 45 milhões em dívidas do FGTS, mas preserva valores devidos aos trabalhadores",
     "subtitle": "Nova modalidade oferece parcelamento de até 133 meses e descontos condicionados à situação do devedor. A medida procura recuperar créditos e facilitar a regularização de empregadores sem reduzir os valores destinados diretamente aos trabalhadores.",
